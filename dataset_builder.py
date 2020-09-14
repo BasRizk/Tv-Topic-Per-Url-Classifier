@@ -38,7 +38,7 @@ def scrap_web_text(url):
 
     try:
         res = requests_session.get(url, allow_redirects=True,
-                                    verify=True, headers=headers, timeout=100)
+                                    verify=True, headers=headers, timeout=20)
         
     except requests.exceptions.Timeout:
         print("\n$s : timed out" % url)
